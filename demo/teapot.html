@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <meta name="author" content="Moritz Hahn">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+    <script src="../src/threejs/TeapotBufferGeometry.js"></script>
+    <script src="../src/aframe/Teapot.js"></script>
+  </head>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene stats>
+      <a-entity environment="groundColor: #c0c0c0; ground: flat;"></a-entity>
+      <a-entity teapot="fitLid: true" position="0 1 0" material="color: white; side: double; metalness: 0.3"></a-entity>
+      <a-entity id="camera" camera look-controls wasd-controls="fly: enabled" position="0 1 2" light="type: spot; intensity: 0.5"></a-entity>
+    </a-scene>
+  </body>
+</html>
